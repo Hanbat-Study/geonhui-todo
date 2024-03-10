@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./signup.css" />
+    <title>회원가입</title>
+  </head>
+  <body>
+    <header>
+      <div>건희의 Todo List</div>
+    </header>
+    <main>
+      <section id="signup">
+        <div>
+          <p>이름:</p>
+          <input type="text" id="name" />
+        </div>
+        <div>
+          <p>성별:</p>
+          <div>
+            <input type="radio" id="female" name="gender" /><label>여자</label>
+            <input type="radio" id="male" name="gender" /><label>남자</label>
+          </div>
+        </div>
+        <div>
+          <p>생일:</p>
+          <input type="date" id="birthday" />
+        </div>
+        <div>
+          <p>고향:</p>
+          <select name="hometown" id="hometown">
+            <option value="seoul">서울</option>
+            <option value="gyeonggi">경기도</option>
+            <option value="gangwon">강원도</option>
+            <option value="chungcheong">충청도</option>
+            <option value="jeolla">전라도</option>
+            <option value="gyeongsang">경상도</option>
+            <option value="incheon">인천</option>
+            <option value="daejeon">대전</option>
+            <option value="daegu">대구</option>
+            <option value="gwangju">광주</option>
+            <option value="ulsan">울산</option>
+            <option value="busan">부산</option>
+            <option value="jeju">제주도</option>
+          </select>
+        </div>
+        <div>
+          <p>아이디:</p>
+          <input type="text" id="id" />
+        </div>
+        <div>
+          <p>비밀번호:</p>
+          <input type="password" id="password" />
+        </div>
+        <button type="submit" id="signupBtn">회원가입</button>
+        <p id="login">로그인 하러 가기</p>
+      </section>
+    </main>
+    <footer>
+      <div>made by geonhui</div>
+    </footer>
+    <script>
+      let signupBtn = document.getElementById("signupBtn");
+      signupBtn.addEventListener("click", function () {
+        let name = document.getElementById("name").value;
+        let gender = document.getElementsByTagName("gender").value;
+        let birthday = document.getElementById("birthday").value;
+        let hometown = document.getElementById("hometown").value;
+        let id = document.getElementById("id").value;
+        let password = document.getElementById("password").value;
+        console.log(`이름: ${name}
+성별: ${gender}
+생일: ${birthday}
+고향: ${hometown}
+아이디: ${id}
+비밀번호: ${password}`);
+      });
+
+      let login = document.getElementById("login");
+      login.addEventListener("click", function () {
+        console.log("로그인 페이지로 이동합니다.");
+      });
+    </script>
+  </body>
+</html>
