@@ -20,8 +20,8 @@
         <div>
           <p>성별:</p>
           <div>
-            <input type="radio" id="female" name="gender" /><label>여자</label>
-            <input type="radio" id="male" name="gender" /><label>남자</label>
+            <input type="radio" id="female" name="gender" value="female" /><label>여자</label>
+            <input type="radio" id="male" name="gender" value="male" /><label>남자</label>
           </div>
         </div>
         <div>
@@ -65,7 +65,7 @@
       let signupBtn = document.getElementById("signupBtn");
       signupBtn.addEventListener("click", function () {
         let name = document.getElementById("name").value;
-        let gender = document.getElementsByTagName("gender").value;
+        let gender = document.querySelector("input[type=radio][name=gender]:checked").value;
         let birthday = document.getElementById("birthday").value;
         let hometown = document.getElementById("hometown").value;
         let id = document.getElementById("id").value;
