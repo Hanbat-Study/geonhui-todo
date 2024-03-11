@@ -42,12 +42,14 @@ footer {
     border: none;
     border-radius: 5px;
     font-size: 30px;
+    margin-top: 5px;
 }
 
 #id, #password {
     border: none;
     border-radius: 5px;
     font-size: 20px;
+    margin-bottom: 5px;
 }
 
 p {
