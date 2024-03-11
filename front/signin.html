@@ -17,11 +17,25 @@
         <input type="text" id="id" placeholder="아이디" />
         <input type="password" id="password" placeholder="비밀번호" />
         <button type="submit" id="loginBtn">로그인</button>
-        <p>회원가입 하러 가기</p>
+        <p id="signup">회원가입 하러 가기</p>
       </section>
     </main>
     <footer>
       <div>made by geonhui</div>
     </footer>
+    <script>
+      let loginBtn = document.getElementById("loginBtn");
+      loginBtn.addEventListener("click", function () {
+        let id = document.getElementById("id").value;
+        let password = document.getElementById("password").value;
+
+        console.log(`id: ${id} password: ${password}`);
+      });
+
+      let signup = document.getElementById("signup");
+      signup.addEventListener("click", function () {
+        console.log("회원가입 페이지로 이동합니다.");
+      });
+    </script>
   </body>
 </html>
